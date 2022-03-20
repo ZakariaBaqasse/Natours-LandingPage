@@ -1,0 +1,23 @@
+{
+    "name": "natours-starter",
+    "version": "1.0.0",
+    "description": "Landing page for Tourism agency",
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "node-sass sass/main.scss css/style.css -w",
+        "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+        "concat:css": "concat -o css/style.concat.css css/icon-fonts.css css/style.comp.css",
+        "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+        "compress:css": "node-sass css/style.concat.css css/style.css --output-style compressed",
+        "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    },
+    "author": "Zakaria Baqasse",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.4.4",
+        "concat": "^1.0.3",
+        "node-sass": "^7.0.1",
+        "npm-run-all": "^4.1.5",
+        "postcss-cli": "^9.1.0"
+    }
+}

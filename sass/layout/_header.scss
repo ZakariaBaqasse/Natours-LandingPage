@@ -1,0 +1,30 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right, rgba($primary-color-light, 0.801), rgba($primary-color-dark, 0.801)), url(../img/hero-small.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+    @media only screen and (min-resolution:192dpi) and (min-width:37.5em),
+    only screen and (min-width:125em) {
+        background-image: linear-gradient(to right, rgba($primary-color-light, 0.801), rgba($primary-color-dark, 0.801)), url(../img/hero.jpg);
+    }
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 3.5rem;
+    }
+}
